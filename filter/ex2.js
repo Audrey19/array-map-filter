@@ -14,9 +14,16 @@ Exemple d'entrée:
   [-10, 5, 15, 20]
 
  */
+const tableau = [-12, -10, -7, -1, 5, 8, 11, 15, 20, 27];
+const leNombre = 5;
 
 function getMultiplesOf(numbers, n) {
+const getMultiplesOf = tableau.filter (function(numbers){
+  return numbers % n === 0;
+});
+return getMultiplesOf;
 }
+getMultiplesOf(tableau, leNombre);
 
 // Ne pas modifier l'export
 module.exports = getMultiplesOf;

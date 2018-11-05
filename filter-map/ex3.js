@@ -49,8 +49,43 @@ Sortie attendue:
   [{ Bordeaux: 12 }, { Lille: 12 }]
 
 */
+const tableau = [
+  { city: 'Bordeaux',
+    curriculums: [
+      { name: 'PHP/Symfony', numStudents: 12 },
+      { name: 'JS/React', numStudents: 29 }
+    ]
+  },
+  {
+    city: 'La Loupe',
+    curriculums: [
+      { name: 'JS/Angular', numStudents: 32 }
+    ]
+  },
+  {
+    city: 'Lille',
+    curriculums: [
+      { name: 'PHP/Symfony', numStudents: 12 },
+      { name: 'JS/React', numStudents: 10 }
+    ]
+  },
+  {
+    city: 'Marseille',
+    curriculums: [
+      { name: 'JS/React', numStudents: 16 }
+    ]
+  }
+];
 
-function getStudentsPerCurriculum(campuses, curriculumName) {
+
+
+function getStudentsPerCurriculum(campuses) {
+const studentCity = tableau.curriculums.filter(function (array) {
+  return array.name == 'PHP/Symfony';
+});
+return studentCity;
 }
+
+getStudentsPerCurriculum(tableau);
 
 module.exports = getStudentsPerCurriculum;

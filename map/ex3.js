@@ -58,9 +58,37 @@ En sortie:
   ]
 
  */
+const tableau = [
+{name: 'Crazy Rich Asians', rating: 93},
+{name: 'Skyscraper', rating: 46},
+{name: 'Leave No Trace', rating: 100},
+{name: 'White Boy Rick', rating: 60}
+];
+
 
 function getMoviesFreshness(movies) {
+const description = tableau.map(function(movies){
+if (movies.rating < 60){
+movies.label = "rotten";
+
 }
+else if (60 <= movies.rating && movies.rating <= 75){
+movies.label = "fresh";
+
+}
+else{
+movies.label = "certified fresh";
+
+}
+return movies
+});
+
+return description;
+}
+
+getMoviesFreshness(tableau);
+
+
 
 
 

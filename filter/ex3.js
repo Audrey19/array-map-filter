@@ -22,9 +22,23 @@ Sortie attendue:
   ['Bran Stark', 'Arya Stark', 'Sansa Stark']
 
  */
+const personnage = [
+    'Bran Stark',
+    'Cersei Lannister',
+    'Sandor Clegane',
+    'Arya Stark',
+    'Yara Greyjoy',
+    'Sansa Stark'
+  ]
 
 function keepStarks(names) {
+const keepStarks = personnage.filter( function(string){
+  return string.includes("Stark");
+});
+return keepStarks;
 }
+
+keepStarks(personnage);
 
 // Ne pas modifier l'export
 module.exports = keepStarks;

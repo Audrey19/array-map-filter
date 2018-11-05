@@ -34,15 +34,19 @@ const tableauProduit = [
   { name: 'Huawei P20', price: 480 },
   { name: 'Huawei P20 Pro', price: 649 }
 ];
-const prixMax = ;
+
+const prixMax = 500;
+
 
 function filterOnPrice(products, maxPrice) {
 const filterOnPrice = products.filter( function(product){
-  return product.price < maxPrice;
+  if (product.price <= maxPrice){
+    return product.name + product.price;
+  }
 });
 return filterOnPrice;
 }
 
-
+filterOnPrice(tableauProduit, prixMax)
 // Ne pas modifier l'export
 module.exports = filterOnPrice;

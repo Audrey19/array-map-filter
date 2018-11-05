@@ -39,7 +39,6 @@ const bannir = ['bloody', 'damn'];
 function filterOffensiveComments(comments, bannedWords) {
   const filterCom = comments.filter(function(comment){
     const maj = bannedWords[0].toUpperCase();
-    console.log(maj);
     if((comment.includes(maj)) === false && (comment.includes(bannedWords[0])) === false && (comment.includes(bannedWords[1])) === false){
       return comment;
     }

@@ -80,12 +80,6 @@ const tableau = [
 
 
 function getStudentsPerCurriculum(campuses) {
-const studentCity = tableau.curriculums.filter(function (array) {
-  return array.name == 'PHP/Symfony';
-});
-return studentCity;
 }
-
-getStudentsPerCurriculum(tableau);
 
 module.exports = getStudentsPerCurriculum;
